@@ -11,7 +11,7 @@ const Random = () => {
       try {
         const response = await fetch('https://api.pexels.com/v1/search?query=nature', {
           headers: {
-            Authorization: 'hCHmImMZjkak5qoDSQWGaXfxfHo5E75AEUp6qECWDjEjVcSW9onUrkIH' // Your Pexels API Key
+            Authorization: 'hCHmImMZjkak5qoDSQWGaXfxfHo5E75AEUp6qECWDjEjVcSW9onUrkIH' 
           }
         });
 
@@ -20,7 +20,7 @@ const Random = () => {
         }
 
         const data = await response.json();
-        setSlides(data.photos); // The photos are in the 'photos' property
+        setSlides(data.photos); 
       } catch (error) {
         console.error('Error fetching data:', error);
       }
